@@ -22,6 +22,18 @@ class DBTest:
             cursor.close();
             self.conn.close();
 
+    def fetchByProductId(self, id):
+        self.conn.connect();
+        cursor = self.conn.cursor()
+        cursor.execute("""select * from product where 
+        ProductId='%d'""" % (id))
+        rows = cursor.fetchall();
+        cursor.close();
+        self.conn.close();
+        return rows;
+
+
 dbTest=DBTest()
 data=[2423,'Mouse','2020-1-2',1500]
-dbTest.addProduct(data)
+#dbTest.addProduct(data)
+print(dbTest.fetchByProductId(2423))
