@@ -28,7 +28,7 @@ class Product:
 
     def getCost(self):
         return self.__cost
-
+'''
 import datetime
 product=Product(3248723,'Laptop',datetime.date(2021,5,21),34568)
 
@@ -40,3 +40,5 @@ product.setName("MobilePhone")
 
 
 print(product.getProductId(),product.getName(),product.getDop(),product.getCost())
+
+'''
